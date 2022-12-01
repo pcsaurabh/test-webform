@@ -18,6 +18,9 @@
     <script>
       const pcIframe = document.getElementById("pc-iframe");
       pcIframe.src = pcIframe.src + window.location.search;
+      if (window.location.search)
+        pcIframe.src = pcIframe.src + "&page_title=" + document.title;
+      else pcIframe.src = pcIframe.src + "?page_title=" + document.title;
     </script>
   </body>
 </html>
