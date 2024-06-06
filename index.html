@@ -11,17 +11,17 @@
       <iframe referrerpolicy="unsafe-url" id="pc-iframe" src="https://app.peppercloud.com/form/2b9118df-c4e0-4f0e-a890-8837aee6ff8b/embed"></iframe>
   </div>
   <script>
-      const pcIframe = document.getElementById("pc-iframe");
-      pcIframe.onload = () => {
-        pcIframe.contentWindow.postMessage(
-        {
-         type: "pc-parent-info",
-          url: window.location.href,
-          title: document.title,
-        },
-        "*"
-        );
-      };
-  </script>
+    const pcIframe = document.getElementById("pc-iframe");
+    pcIframe.onload = () => {
+      pcIframe.contentWindow.postMessage(
+      {
+       type: "pc-parent-info",
+        url: window.location.href,
+        title: document.title,
+      },
+      "*"
+      );
+    };
+</script>
   </body>
 </html>
